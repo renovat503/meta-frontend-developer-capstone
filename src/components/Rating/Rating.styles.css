@@ -1,0 +1,29 @@
+.rating-container {
+  display: inline-block;
+  background-color: var(--gray);
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.rating {
+  font-size: 18px;
+}
+
+.customer-info {
+  display: inline-flex;
+}
+
+.customer-image {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.customer-name {
+  font-size: 18px;
+}
+
+.rating-description {
+  max-width: 200px;
+  font-size: 14px;
+}
