@@ -1,0 +1,53 @@
+.about-title {
+  color: var(--green);
+  font-size: 3rem;
+  font-family: var(--serif-font);
+  margin-bottom: 0;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-family: var(--serif-font);
+  margin-top: 0;
+}
+
+.about-description {
+  font-weight: 500;
+}
+
+.about-section {
+  margin-left: var(--margin);
+}
+
+.about-container {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.about-images {
+  display: block;
+  width: auto;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: var(--margin);
+}
+
+.about-image-a {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  z-index: 100;
+}
+
+.about-image-b {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  right: 100px;
+  top: 150px;
+  z-index: 1;
+}
