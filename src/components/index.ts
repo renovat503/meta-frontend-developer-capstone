@@ -1,0 +1,9 @@
+export { default as Layout } from "./Layout/Layout";
+export { default as Nav } from "./Nav/Nav";
+export { default as Hero } from "./Hero/Hero";
+export { default as Footer } from "./Footer/Footer";
+export { default as Specials } from "./Specials/Specials";
+export { default as Testimonials } from "./Testimonials/Testimonials";
+export { default as About } from "./About/About";
+export { default as Card } from "./Card/Card";
+export { default as Rating } from "./Rating/Rating";
