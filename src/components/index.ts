@@ -7,3 +7,4 @@ export { default as Testimonials } from "./Testimonials/Testimonials";
 export { default as About } from "./About/About";
 export { default as Card } from "./Card/Card";
 export { default as Rating } from "./Rating/Rating";
+export { default as BookingForm } from "./BookingForm/BookingForm";
