@@ -75,5 +75,6 @@
   position: relative;
   z-index: 0;
   background-color: var(--green);
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

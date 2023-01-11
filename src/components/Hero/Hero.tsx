@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Hero.styles.css";
 
 const Hero = () => {
@@ -13,7 +14,9 @@ const Hero = () => {
           recipes served with a modern <br />
           twist.
         </p>
-        <button className="hero-button">Reserve a Table</button>
+        <NavLink to="/booking">
+          <button className="hero-button">Reserve a Table</button>
+        </NavLink>
       </section>
       <img className="hero-image" src="/restaurant-food.jpg" alt="Hero" />
     </div>
