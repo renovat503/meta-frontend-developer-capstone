@@ -1,0 +1,18 @@
+.footer-background {
+  background-color: var(--dark-gray);
+  color: var(--gray);
+  padding: 10px var(--margin);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+}
+
+.copyright {
+  margin: 10px 0;
+}
