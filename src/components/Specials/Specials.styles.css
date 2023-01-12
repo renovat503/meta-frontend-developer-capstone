@@ -54,5 +54,4 @@
 .specials-grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: 2fr 1fr;
 }
