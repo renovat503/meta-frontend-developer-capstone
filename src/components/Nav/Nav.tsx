@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Nav.styles.css";
 
 const Nav = () => {
@@ -6,22 +7,34 @@ const Nav = () => {
       <img src="/logo.svg" alt="Little Lemon" />
       <ul>
         <li>
-          <a href="/">Home</a>
+          <NavLink to="/">
+            <a href="/">Home</a>
+          </NavLink>
         </li>
         <li>
-          <a href="/about">About</a>
+          <NavLink to="/about">
+            <a href="/about">About</a>
+          </NavLink>
         </li>
         <li>
-          <a href="/blog">Menu</a>
+          <NavLink to="/blog">
+            <a href="/blog">Menu</a>
+          </NavLink>
         </li>
         <li>
-          <a href="/reservations">Reservations</a>
+          <NavLink to="/reservations">
+            <a href="/reservations">Reservations</a>
+          </NavLink>
         </li>
         <li>
-          <a href="/order-online">Order Online</a>
+          <NavLink to="/order-online">
+            <a href="/order-online">Order Online</a>
+          </NavLink>
         </li>
         <li>
-          <a href="/login">Login</a>
+          <NavLink to="/login">
+            <a href="/login">Login</a>
+          </NavLink>
         </li>
       </ul>
     </nav>
