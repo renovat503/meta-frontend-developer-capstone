@@ -1,5 +1,7 @@
+import { useFormik } from "formik";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import { BookingFormValidation } from "validations";
 import "./BookingForm.styles.css";
 
 interface BookingFormProps {
@@ -15,13 +17,21 @@ const BookingForm: React.FC<BookingFormProps> = ({
 }) => {
   const date = new Date();
   const today = date.toISOString().substring(0, 10);
-  const [values, setValues] = React.useState({
-    date: today,
-    time: availableTimes[0],
-    guests: 1,
-    occasion: "Birthday",
-  });
   const navigate = useNavigate();
+  const formik = useFormik({
+    initialValues: {
+      date: today,
+      time: availableTimes[0],
+      guests: 1,
+      occasion: "Birthday",
+    },
+    validationSchema: BookingFormValidation,
+    onSubmit: (values) => {
+      if (submitForm(values) && !formik.errors) {
+        navigate("/booking-confirmation");
+      }
+    },
+  });
 
   const times = React.useMemo(
     () => availableTimes.map((time) => <option key={time}>{time}</option>),
@@ -31,29 +41,35 @@ const BookingForm: React.FC<BookingFormProps> = ({
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setValues({ ...values, [event.target.name]: event.target.value });
     if (event.target.name === "date") {
-      dispatch({ type: "CHANGE_DATE", payload: event.target.value });
+      dispatch({
+        type: "CHANGE_DATE",
+        payload: event.target.value,
+      });
     }
+    formik.handleChange(event);
   };
 
   return (
     <>
-      <h1>Book Now</h1>
-      <form className="booking-form">
+      <h1 className="form-title">Book Now</h1>
+      <form className="booking-form" onSubmit={formik.handleSubmit}>
         <label htmlFor="res-date">Choose date</label>
         <input
           id="res-date"
           type="date"
           name="date"
-          value={values.date}
+          value={formik.values.date}
           onChange={handleChange}
         />
+        {formik.errors.date && formik.touched.date && (
+          <p className="error">{formik.errors.date}</p>
+        )}
         <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           name="time"
-          value={values.time}
+          value={formik.values.time}
           onChange={handleChange}
         >
           {times}
@@ -66,28 +82,25 @@ const BookingForm: React.FC<BookingFormProps> = ({
           min="1"
           max="10"
           name="guests"
-          value={values.guests}
+          value={formik.values.guests}
           onChange={handleChange}
         />
+        {formik.errors.guests && formik.touched.guests && (
+          <p className="error">{formik.errors.guests}</p>
+        )}
         <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
           name="occasion"
-          value={values.occasion}
+          value={formik.values.occasion}
           onChange={handleChange}
         >
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input
-          type="submit"
-          value="Make Your reservation"
-          onClick={(values) => {
-            if (submitForm(values)) {
-              navigate("/booking-confirmation");
-            }
-          }}
-        />
+        <button type="submit" className="submit-button">
+          Make Your reservation
+        </button>
       </form>
     </>
   );
