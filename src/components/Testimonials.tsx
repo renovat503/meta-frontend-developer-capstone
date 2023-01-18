@@ -8,7 +8,7 @@ const Testimonials = () => {
   const testimonials = React.useMemo(
     () =>
       reviews.map((review) => (
-        <Grid.Col md={3}>
+        <Grid.Col key={review.name} md={3}>
           <Testimonial review={review} />
         </Grid.Col>
       )),
