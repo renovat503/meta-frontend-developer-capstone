@@ -1,11 +1,11 @@
 {
   "seats": [
     {
-      "value": "indoor",
+      "value": "Indoor",
       "label": "Indoor seating"
     },
     {
-      "value": "outdoor",
+      "value": "Outdoor",
       "label": "Outdoor seating"
     }
   ],
