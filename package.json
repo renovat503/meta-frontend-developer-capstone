@@ -12,6 +12,7 @@
     "@emotion/react": "^11.10.5",
     "@mantine/core": "^5.10.0",
     "@mantine/dates": "^5.10.1",
+    "@mantine/form": "^5.10.1",
     "@mantine/hooks": "^5.10.0",
     "@tabler/icons": "^1.119.0",
     "dayjs": "^1.11.7",
