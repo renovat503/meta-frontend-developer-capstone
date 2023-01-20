@@ -2,10 +2,9 @@
 
 ![Coursera](https://img.shields.io/badge/Coursera-0747a6?style=flat&logo=coursera&logoColor=white)
 ![Meta](https://img.shields.io/badge/Meta-0668E1?style=flat&logo=meta&logoColor=white)
-
 ![React](https://img.shields.io/badge/React-499CB8?style=flat&logo=react&logoColor=white)
 ![Typescript](https://img.shields.io/badge/Typescript-3178C6?style=flat&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-purple?style=flat&logo=vite&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8c5894?style=flat&logo=vite&logoColor=white)
 
 Building the **landing page** and the **reservations page** of the little lemon restaurant app in the process of obtaining the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) teached by [Meta](https://www.facebook.com/business/learn/front-end-back-end-developer-certificate-coursera).
 
