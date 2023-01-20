@@ -45,7 +45,7 @@ const useStyles = createStyles((theme) => ({
     color: colors.primary,
     borderRadius: 0,
     borderBottom: `solid 1px ${colors.primary}`,
-    borderLeft: `solid 1px ${colors.primary}`,
+    borderRight: `solid 1px ${colors.primary}`,
     textAlign: "center",
     fontWeight: 600,
     "&:hover": {
@@ -58,7 +58,8 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const SelectField = (props: SelectProps & { grid?: boolean }) => {
+const SelectField: React.FC<SelectProps & { grid?: boolean }> = (props) => {
+  const { grid, ...otherProps } = props;
   const { classes, cx } = useStyles();
 
   return (
@@ -66,14 +67,14 @@ const SelectField = (props: SelectProps & { grid?: boolean }) => {
       variant="filled"
       radius="md"
       size="xl"
-      {...props}
+      {...otherProps}
       classNames={{
         input: cx(classes.input, {
-          [classes.activeInput]: props.value !== null,
+          [classes.activeInput]: props.value,
         }),
         dropdown: classes.dropdown,
-        itemsWrapper: props.grid ? classes.grid : classes.itemsWrapper,
-        item: props.grid ? classes.cell : classes.item,
+        itemsWrapper: grid ? classes.grid : classes.itemsWrapper,
+        item: grid ? classes.cell : classes.item,
         rightSection: classes.rightSection,
       }}
     />

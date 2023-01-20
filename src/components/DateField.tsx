@@ -16,10 +16,16 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 600,
   },
   dropdown: {
-    borderRadius: theme.radius.xs,
+    borderRadius: theme.radius.lg,
   },
   rightSection: {
     marginRight: 20,
+  },
+  day: {
+    "&[data-selected]": {
+      backgroundColor: colors.primary,
+      position: "relative",
+    },
   },
 }));
 
@@ -34,10 +40,11 @@ const DateField = (props: DatePickerProps) => {
       {...props}
       classNames={{
         input: cx(classes.input, {
-          [classes.activeInput]: props.value !== null,
+          [classes.activeInput]: props.value,
         }),
         dropdown: classes.dropdown,
         rightSection: classes.rightSection,
+        day: classes.day,
       }}
     />
   );

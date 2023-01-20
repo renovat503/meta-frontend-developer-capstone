@@ -1,13 +1,15 @@
 import * as React from "react";
-import { Center, Group, Text } from "@mantine/core";
+import { Box, Center, Group, Text } from "@mantine/core";
 import { IconAlertTriangle } from "@tabler/icons";
 import { colors } from "src/theme";
+import { SWITCH_CONFIRM } from "src/reducer";
 
 interface DisplayerProps {
   error?: boolean;
   value: string | null | undefined;
   extraValue?: string;
   icon?: React.ReactNode;
+  dispatch: React.Dispatch<any>;
 }
 
 const Displayer: React.FC<DisplayerProps> = ({
@@ -15,9 +17,19 @@ const Displayer: React.FC<DisplayerProps> = ({
   value,
   extraValue,
   icon,
+  dispatch,
 }) => {
   return (
-    <>
+    <Box
+      sx={{ cursor: error ? "pointer" : "text" }}
+      onClick={
+        error
+          ? () => {
+              dispatch({ type: SWITCH_CONFIRM });
+            }
+          : () => {}
+      }
+    >
       <Center>
         <IconAlertTriangle
           size={20}
@@ -30,7 +42,7 @@ const Displayer: React.FC<DisplayerProps> = ({
           {value ? value : extraValue}
         </Text>
       </Group>
-    </>
+    </Box>
   );
 };
 

@@ -7,6 +7,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
+import { useNavigate } from "react-router-dom";
 import { colors } from "src/theme";
 
 const useStyles = createStyles((theme) => ({
@@ -39,6 +40,7 @@ const useStyles = createStyles((theme) => ({
 
 const Hero = () => {
   const { classes } = useStyles();
+  const navigate = useNavigate();
 
   return (
     <Box py="xl" className={classes.background}>
@@ -56,12 +58,14 @@ const Hero = () => {
               recipes served with a modern <br />
               twist.
             </Text>
+
             <Button
               size="md"
               radius="lg"
               c="dark"
               fw="bolder"
               className={classes.button}
+              onClick={() => navigate("/reservations")}
             >
               Reserve a Table
             </Button>

@@ -10,6 +10,7 @@ import {
   createStyles,
 } from "@mantine/core";
 import { colors } from "src/theme";
+import { NavLink, useLocation } from "react-router-dom";
 
 const navLinks = [
   {
@@ -51,42 +52,47 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       display: "none",
     },
-    "&:focus": {
-      backgroundColor: colors.primary,
-      color: theme.white,
-    },
   },
   burger: {
     [theme.fn.largerThan("sm")]: {
       display: "none",
     },
   },
+  linkActive: {
+    "&, &:hover": {
+      backgroundColor: colors.primary,
+      color: theme.white,
+    },
+  },
 }));
 
 const _Header = () => {
-  const { classes } = useStyles();
-
+  const { classes, cx } = useStyles();
+  const { pathname } = useLocation();
   const [opened, setOpened] = React.useState(false);
 
   const links = React.useMemo(
     () =>
       navLinks.map((link) => (
-        <Button
-          key={link.title}
-          className={classes.button}
-          variant="white"
-          radius="md"
-          fw="bold"
-          c="dark"
-        >
-          {link.title}
-        </Button>
+        <NavLink key={link.title} to={link.link}>
+          <Button
+            className={cx(classes.button, {
+              [classes.linkActive]: link.link === pathname,
+            })}
+            variant="white"
+            radius="md"
+            fw="bold"
+            c="dark"
+          >
+            {link.title}
+          </Button>
+        </NavLink>
       )),
-    []
+    [pathname]
   );
 
   return (
-    <Header height={60} py="lg" className={classes.header}>
+    <Header height={80} py="lg" className={classes.header}>
       <Container className={classes.inner}>
         <Box>
           <Image src="/logo.svg" alt="Little Lemon" />

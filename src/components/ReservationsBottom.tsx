@@ -1,12 +1,6 @@
 import * as React from "react";
 import { Container, createStyles, Grid } from "@mantine/core";
 
-const images = [
-  "/restaurant.jpg",
-  "/restaurant-chef.jpg",
-  "restaurant-food.jpg",
-];
-
 const useStyles = createStyles((theme) => ({
   image: {
     height: 300,
@@ -16,7 +10,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const ReservationsBottom = () => {
+const ReservationsBottom: React.FC<{ images: string[] }> = ({ images }) => {
   const { classes } = useStyles();
 
   const pictures = React.useMemo(
@@ -26,7 +20,7 @@ const ReservationsBottom = () => {
           <img src={image} className={classes.image} />
         </Grid.Col>
       )),
-    []
+    [images]
   );
 
   return (
