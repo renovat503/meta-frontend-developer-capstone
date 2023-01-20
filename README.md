@@ -9,12 +9,11 @@
 
 Building the **landing page** and the **reservations page** of the little lemon restaurant app in the process of obtaining the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) teached by [Meta](https://www.facebook.com/business/learn/front-end-back-end-developer-certificate-coursera).
 
-<a href="https://www.credly.com/org/facebook-blueprint/badge/meta-front-end-developer-certificate">
-    <img style="display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;" src="public/meta-frontend-cert.png" width="30%" height="30%" />
-</a>
+<p align="center">
+    <a href="https://www.credly.com/org/facebook-blueprint/badge/meta-front-end-developer-certificate">
+        <img src="public/meta-frontend-cert.png" width="30%" height="30%" />
+    </a>
+</p>
 
 ## :warning: Disclaimer
 
