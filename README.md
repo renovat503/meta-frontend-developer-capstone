@@ -21,8 +21,6 @@ Building the **landing page** and the **reservations page** of the little lemon 
 
 ## Quick start
 
----
-
 ### Install dependencies
 
 ```bash
