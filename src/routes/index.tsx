@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage, BookingPage, ConfirmedBooking } from "pages";
+import { HomePage, ReservationsPage } from "src/pages";
 
 const RootRoute = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/booking" element={<BookingPage />} />
-      <Route path="/booking-confirmation" element={<ConfirmedBooking />} />
+      <Route path="/reservations" element={<ReservationsPage />} />
     </Routes>
   );
 };

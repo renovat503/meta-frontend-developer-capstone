@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Meta Front-End Developer Capstone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Coursera](https://img.shields.io/badge/Coursera-0747a6?style=flat&logo=coursera&logoColor=white)
+![Meta](https://img.shields.io/badge/Meta-0668E1?style=flat&logo=meta&logoColor=white)
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-499CB8?style=flat&logo=react&logoColor=white)
+![Typescript](https://img.shields.io/badge/Typescript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-purple?style=flat&logo=vite&logoColor=white)
 
-In the project directory, you can run:
+Building the **landing page** and the **reservations page** of the little lemon restaurant app in the process of obtaining the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) teached by [Meta](https://www.facebook.com/business/learn/front-end-back-end-developer-certificate-coursera).
 
-### `npm start`
+<a href="https://www.credly.com/org/facebook-blueprint/badge/meta-front-end-developer-certificate">
+    <img style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;" src="public/meta-frontend-cert.png" width="30%" height="30%" />
+</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :warning: Disclaimer
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> This is not supposed to be a gradable solution as it doesn't use `semantics` and it contains no written tests. Instead it uses [Mantine UI](https://mantine.dev/) for most of its functionality and other supportive libraries.
 
-### `npm test`
+## Quick start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Run the app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run dev
+```

@@ -1,13 +1,13 @@
-import { About, Hero, Specials, Testimonials } from "components";
+import { About, Hero, Specials, Testimonials } from "src/components";
 
 const HomePage = () => {
   return (
-    <main>
+    <>
       <Hero />
       <Specials />
       <Testimonials />
       <About />
-    </main>
+    </>
   );
 };
 
