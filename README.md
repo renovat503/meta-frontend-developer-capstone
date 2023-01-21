@@ -14,11 +14,9 @@ Building the **landing page** and the **reservations page** of the little lemon 
     </a>
 </p>
 
-## :warning: Disclaimer
+### :warning: Disclaimer
 
-> This is not supposed to be a gradable solution as it doesn't use `semantics` and it contains no written tests. Instead it uses [Mantine UI](https://mantine.dev/) for most of its functionality and other supportive libraries.
-
-## Quick start
+> This is not supposed to be a gradable solution as it doesn't use `semantics` and it contains no written tests. Instead it uses [Mantine](https://mantine.dev/) for most of its functionality and other supportive libraries.
 
 ### Install dependencies
 
