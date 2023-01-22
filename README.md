@@ -6,7 +6,7 @@
 ![Typescript](https://img.shields.io/badge/Typescript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8c5894?style=flat&logo=vite&logoColor=white)
 
-Building the **landing page** and the **reservations page** of the little lemon restaurant app in the process of obtaining the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) teached by [Meta](https://www.facebook.com/business/learn/front-end-back-end-developer-certificate-coursera).
+Building the **landing page** and the **reservations page** of the little lemon restaurant app as part of the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) teached by [Meta](https://www.facebook.com/business/learn/front-end-back-end-developer-certificate-coursera).
 
 <p align="center">
     <a href="https://www.credly.com/org/facebook-blueprint/badge/meta-front-end-developer-certificate">
